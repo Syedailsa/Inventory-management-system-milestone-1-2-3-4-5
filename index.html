@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Inventory Management System</h1>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <div class="table">
+        <section class="table-header">
+          <h2>Our Products</h2>
+        </section>
+        <section class="table-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Product's Name</th>
+                <th>Company Size</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody">
+            </tbody>
+              
+          </table>
+              
+        </section>
+              <form id="addProductForm">
+                <input type="text" id="productName" placeholder="Product Name" required />
+                <!-- <input type="text" id="companySize" placeholder="Company Size" required /> -->
+                <select id="companySize" required>
+                  <option disabled selected style="color: rgba(102, 101, 101, 0.733);">Company Size</option>
+                  <option value="SM" style="color: black;">SM</option>
+                  <option value="ML" style="color: black;">ML</option>
+                  <option value="L" style="color: black;">L</option>
+                  <option value="SML" style="color: black;">SML</option>
+                </select>
+                <input type="number" min="0" oninput="validity.valid||(value='');" id="productPrice" placeholder="Price" required />
+                <button type="submit">Add Product</button>
+              </form>
+      </div>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <small>
+        <p>Created by Ilsa Ubaid</p>
+        &copy; All rights reserved
+      </small>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
